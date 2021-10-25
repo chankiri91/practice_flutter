@@ -66,15 +66,21 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Kazuma Kiriyama'),
       ),
       body: Center(
-        child: OutlinedButton(
-          child: Text(text),
-          onPressed: () async {
-            final result = await Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => NextPage('Kazuma')),
-            );
-            text = result;
-          },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+            OutlinedButton(
+              child: Text(text),
+              onPressed: () async {
+                final result = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NextPage('Kazuma')),
+                );
+                text = result;
+              },
+            ),
+          ],
         )
       ),
       floatingActionButton: FloatingActionButton(
