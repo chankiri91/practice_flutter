@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+            Image.asset('images/kiri.jpeg'),
             OutlinedButton(
               child: Text(text),
               onPressed: () async {
