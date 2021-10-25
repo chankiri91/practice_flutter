@@ -18,7 +18,7 @@ class NextPage extends StatelessWidget {
               child: OutlinedButton(
                 child: Text('戻る'),
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pop(context, 'this is result');
                 },
               )
           ),

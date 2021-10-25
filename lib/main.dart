@@ -66,11 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: OutlinedButton(
           child: Text('次へ'),
-          onPressed: () {
-            Navigator.push(
+          onPressed: () async {
+            final result = await Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => NextPage('Kazuma')),
             );
+            print(result);
           },
         )
       ),
