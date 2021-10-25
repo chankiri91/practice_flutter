@@ -69,7 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('images/kiri.jpeg'),
+            Icon(
+              Icons.directions_bike
+            ),
             OutlinedButton(
               child: Text(text),
               onPressed: () async {
