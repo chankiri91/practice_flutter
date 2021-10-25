@@ -57,6 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  String text = '次';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,13 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: OutlinedButton(
-          child: Text('次へ'),
+          child: Text(text),
           onPressed: () async {
             final result = await Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => NextPage('Kazuma')),
             );
-            print(result);
+            text = result;
           },
         )
       ),
